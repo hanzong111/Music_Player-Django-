@@ -52,3 +52,10 @@
     path('home', main),
     ]
 ```
+## models.py file
+- This like a database for our app (not 100% accurate)
+- In Django ,instead of creating a table , we create a model
+- Django allows us to write python code and it will intepret that python code and automatically perform database operations
+
+## serializers.py file
+- We can use Django's rest_framework to serialize our class and convert it into diff file formats for front end to understand (JSON files)
