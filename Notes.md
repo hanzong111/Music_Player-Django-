@@ -1,10 +1,9 @@
-# My Notes
-## Django Setup
-- pip install django djangorestframework
+# Django Setup
+### cmd : pip install django djangorestframework
 ## Starting a Django project
-- django-admin startproject (project name)
+### cmd : django-admin startproject (project name)
 ## Creating a Django App
-- django-admin startapp (app name)
+### cmd : django-admin startapp (app name)
 - After we create an App , we need to add the app in our project's settings.py 
 
 # Different Files in a Django Project Directory
@@ -59,3 +58,12 @@
 
 ## serializers.py file
 - We can use Django's rest_framework to serialize our class and convert it into diff file formats for front end to understand (JSON files)
+
+# React Setup
+## Starting a React Frontend workspace
+### cmd : npm init -y 
+
+## Some cmds related to this project 
+### cmd : npm i webpack webpack-cli 
+- for installing webpack 
+- webpack : take all of our source Javascript files and compile/bundle it into one single Javascript file.
