@@ -67,3 +67,35 @@
 ### cmd : npm i webpack webpack-cli 
 - for installing webpack 
 - webpack : take all of our source Javascript files and compile/bundle it into one single Javascript file.
+
+### cmd : npm i @babel/core babel-loader @babel/preset-env @babel/preset-react --save-dev
+- for installing babel
+- babel : take our code and transpile it into codes that is friendly with all different type of browsers (so that our newer version Javascript codes can be run on older browsers)
+
+### cmd : npm install @babel/plugin-proposal-class-properties
+- need this to use "async" & "await" in our Javascript Code
+
+### cmd : npm i react react-dom --save-dev
+- install react
+
+### cmd : npm install react-router-dom
+- Allow us to rerout the pages so that we can go 2 diff pages from our react app
+
+### cmd : npm install @material-ui/core
+- install material_ui
+- material_ui : some built in components 
+- cards & grids that we can use
+- kind of simmilar to something like bootstrap
+
+### cmd : npm install @material-ui/icons
+- get icons from material ui
+
+
+### cmd : npm config set legacy-peer-deps true
+- The concept of peer dependencies can cause challenges when installing packages. Consider the following scenario:
+
+Package A requires Package B, and both have a common peer dependency, Package C. However, Package A requires Package C in version 1.x, while Package B requires Package C in version 2.x.
+
+When you try to install Package A and Package B together in your project, npm might encounter a conflict due to the different peer dependency versions required by each package. This can lead to installation failures, and it becomes challenging to resolve the conflicts manually.
+
+- To alleviate the complications caused by conflicting peer dependencies, npm introduced the "legacy-peer-deps" configuration flag. When set to true, this flag instructs npm to revert to the older behavior of installing packages with peer dependencies.
