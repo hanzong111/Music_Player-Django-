@@ -68,12 +68,16 @@
 - Take all of our source Javascript files and compile/bundle it into one single Javascript file.
 ### cmd : npm i webpack webpack-cli 
 - Installing webpack 
-
+### After we install bable we need to setup the configs file
+![alt text](webpackconfig1.png)
+![alt text](webpackconfig2.png)
 ## Babel
 - Take our code and transpile it into codes that is friendly with all different type of browsers (so that our newer version Javascript codes can be run on older browsers)
 ### cmd : npm i @babel/core babel-loader @babel/preset-env @babel/preset-react --save-dev
 - Installing babel
 
+### After we install bable we need to setup the configs file
+![alt text](babelconfig.png)
 ### cmd : npm install @babel/plugin-proposal-class-properties
 - Need this to use "async" & "await" in our Javascript Code
 
