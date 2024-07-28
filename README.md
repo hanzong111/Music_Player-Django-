@@ -1,10 +1,10 @@
 # Notes while doing this project
 # Django Setup
-### cmd : pip install django djangorestframework
+``pip install django djangorestframework ``
 ## Starting a Django project
-### cmd : django-admin startproject (project name)
+``django-admin startproject (project name)``
 ## Creating a Django App
-### cmd : django-admin startapp (app name)
+ ``django-admin startapp (app name)``
 - After we create an App , we need to add the app in our project's settings.py 
 
 # Different Files in a Django Project Directory
@@ -62,47 +62,50 @@
 
 # React Setup
 ## Starting a React Frontend workspace
-### cmd : npm init -y 
+`npm init -y `
 
 # Some cmds related to this project 
 ## Webpack
 - Take all of our source Javascript files and compile/bundle it into one single Javascript file.
-### cmd : npm i webpack webpack-cli 
+
+``npm i webpack webpack-cli ``
 - Installing webpack 
-### After we install bable we need to setup the configs file
+### After we install webpack we need to setup the configs file
 ![alt text](webpackconfig1.png)
 ![alt text](webpackconfig2.png)
 ## Babel
 - Take our code and transpile it into codes that is friendly with all different type of browsers (so that our newer version Javascript codes can be run on older browsers)
-### cmd : npm i @babel/core babel-loader @babel/preset-env @babel/preset-react --save-dev
+
+``npm i @babel/core babel-loader @babel/preset-env @babel/preset-react --save-dev``
 - Installing babel
 
 ### After we install bable we need to setup the configs file
 ![alt text](babelconfig.png)
-### cmd : npm install @babel/plugin-proposal-class-properties
+
+``npm install @babel/plugin-proposal-class-properties``
 - Need this to use "async" & "await" in our Javascript Code
 
 ## React
-### cmd : npm i react react-dom --save-dev
+``npm i react react-dom --save-dev``
 - install react
 
-### cmd : npm install react-router-dom
+``npm install react-router-dom``
 - Allow us to rerout the pages so that we can go 2 diff pages from our react app
 
 ## Material-ui
 - some built in components such as cards & grids that we can use. Kind of simillar to something like bootstrap
 
-### cmd : npm install @material-ui/core
+``npm install @material-ui/core``
 - Install material_ui
 - material_ui : some built in components 
 - cards & grids that we can use
 - kind of simmilar to something like bootstrap
 
-### cmd : npm install @material-ui/icons
+``npm install @material-ui/icons``
 - get icons from material ui
 
 ## Npm config - legacy-peer-deps
-### cmd : npm config set legacy-peer-deps true
+``npm config set legacy-peer-deps true``
 - The concept of peer dependencies can cause challenges when installing packages. Consider the following scenario:
 
 Package A requires Package B, and both have a common peer dependency, Package C. However, Package A requires Package C in version 1.x, while Package B requires Package C in version 2.x.
@@ -112,7 +115,9 @@ Package A requires Package B, and both have a common peer dependency, Package C.
 - To alleviate the complications caused by conflicting peer dependencies, npm introduced the "legacy-peer-deps" configuration flag. When set to true, this flag instructs npm to revert to the older behavior of installing packages with peer dependencies.
 
 # To run webpage
-## 1. Inside of the Music_player directory , "python3 manage.py runserver"
+## 1. Inside of the Music_player directory 
+``python3 manage.py runserver``
 - This runs the backend django server
-## 2. Inside of the Frontend directory , "npm run dev"
+## 2. Inside of the Frontend directory 
+``npm run dev``
 - This runs the dev script inside of package.json file 
