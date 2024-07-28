@@ -1,0 +1,19 @@
+{
+    /* Setup the Bable Loader */
+    /* The presets that we are using */
+    "presets": [
+      [
+        /* present-env thats targeting node version 10 */
+        "@babel/preset-env",
+        {
+          "targets": {
+            "node": "10"
+          }
+        }
+      ],
+      "@babel/preset-react"
+    ],
+
+    /* Add this plugin so that we can use async and await */
+    "plugins": ["@babel/plugin-proposal-class-properties"]
+  }
