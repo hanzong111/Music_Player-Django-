@@ -111,8 +111,8 @@ Package A requires Package B, and both have a common peer dependency, Package C.
 
 - To alleviate the complications caused by conflicting peer dependencies, npm introduced the "legacy-peer-deps" configuration flag. When set to true, this flag instructs npm to revert to the older behavior of installing packages with peer dependencies.
 
-## To run webpage
-# 1. Inside of the Music_player directory , "python3 manage.py runserver"
+# To run webpage
+## 1. Inside of the Music_player directory , "python3 manage.py runserver"
 - This runs the backend django server
-# 2. Inside of the Frontend directory , "npm run dev"
+## 2. Inside of the Frontend directory , "npm run dev"
 - This runs the dev script inside of package.json file 
