@@ -1,3 +1,4 @@
+# Notes while doing this project
 # Django Setup
 ### cmd : pip install django djangorestframework
 ## Starting a Django project
