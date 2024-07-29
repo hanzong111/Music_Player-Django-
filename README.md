@@ -7,7 +7,7 @@
 - [React Setup](#React-Setup)
 - [Cmds](#Some-cmds-related-to-this-project)
 - [To Run Webpage](#To-run-webpage)
-- [Basic explanation of how react works under the hood](#how-we-integrate-react-into-our-project)
+- [Basic explanation of how react works under the hood](#how-react-works-under-the-hood-with-django)
 
 # Django Setup
 ``pip install django djangorestframework ``
@@ -136,7 +136,7 @@ Package A requires Package B, and both have a common peer dependency, Package C.
 
 ![alt text](./images/1.png)
 
-# How we integrate react into our project
+# How React works under the hood with django
 1. When django sends us to the urls.py file inside of our frontend directory, we execute the index function when it reaches a endpoint called ''
 
 ![alt text](./images/2.png)
@@ -144,6 +144,41 @@ Package A requires Package B, and both have a common peer dependency, Package C.
 2. The function index() executes a react function called render() that takes in 2 arguments
 - render(request, path-to-html)
 - Render will automatically look for templates in our template directory 
-- Because we want it to render our frontend template , therefore we pass it the path to the html file in our template directory which is : "frontend/index.html"
+- Because we want it to render our frontend template , therefore we pass it the path to the html file in our templates directory which is : "frontend/index.html"
 
 ![alt text](./images/views.py.png)
+
+3. Before looking into the index.html , we first need to understand how webpack transpile all of our Javascript codes and bundle it into one single file.
+
+4. Inside of webpack.config.js 
+- We specified the entry point of our Javascript file as index.js inside of './src/'
+- We also specified where our bundeled Javascript code will be stored - './static/frontend'
+
+![alt text](images/webpackconfig1.png)
+
+5. Webpack will first look into our specified entry point and compile all required Javascript codes mentioned in the entry Javascript file.
+
+6. Now lets look into our specified Javascript entry point - index.js
+- We import a self written component called 'App' inside of './components/App'
+- And we make it replace 2 html div elements using this self written react component
+- one with elementID = "app1" , another with elementID = "app2"
+
+![alt text](images/index.js.png)
+
+7. Notice that we imported a component called 'App' , now let's look at App.js
+- constructor() - the constructor function of the App class
+- super() - Because our App class inherits from Component , this is to call the default parent constructor (Component's constructor)
+- render() - just a self written function 
+
+![alt text](images/App.js.png)
+
+8. Now , we can look into our index.html
+- before executing this file , webpack will compile all the Javascript codes mentioned above , and bundle it into one called "bundle.js"
+- The "script" tag at the end of the html file is used to executed bundle.js inside of 'static/frontend/bundle.js'
+- bundle.js basically tells react to replace div components with id=app1 & app2 with our own App component (This instruction is being written in index.js)
+![alt text](images/index.html.png)
+
+9. This will be our end product
+- React replacing both div elements
+
+![alt text](<images/end product.png>)
