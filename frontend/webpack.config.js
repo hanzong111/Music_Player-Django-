@@ -9,7 +9,7 @@ module.exports = {
   /* Where should we output it  */
   output: {
     path: path.resolve(__dirname, "./static/frontend"),
-    filename: "[name].js",
+    filename: "bundle.js",
   },
 
   /* Exclude bundeling the node modules folder and use the babel-loader */
