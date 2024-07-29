@@ -1,0 +1,22 @@
+html,
+body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Adding styles to our main div */
+#main {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+/* Adding styles to our app div */
+#app {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
